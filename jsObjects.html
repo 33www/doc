@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>javascript</title>
+	<style type="text/css">
+		*{margin:0px; padding:0px;}
+		header{
+			width: 100%;
+			height: 66px;
+			background-color: #006f84;
+			position: fixed;
+			top: 0;
+			left: 0;
+		}
+		article{
+			margin-top: 66px; 
+			margin-left: 222px;
+			margin-right: 200px;
+			padding-top: 6px;
+			padding-left: 44px;
+			padding-bottom: 66px;
+			line-height: 35px;
+		}
+		aside{
+			width: 200px;
+			height: 100%;
+			background-color: #fff;
+			padding-top: 22px;
+			position: fixed;
+			top:66px;
+			right: 0;
+		}
+		aside nav{
+			width: 199px;
+			border-left: 1px solid rgba(0,0,0,0.1);
+		}
+		aside nav ul{
+			list-style: none;
+			padding: 0 33px;
+			line-height: 30px;
+			color: rgba(0,0,0,0.65);
+		}
+		/*导航栏跳转*/
+		aside nav ul li .target-h1{
+			text-decoration: none;
+			color: #99979c;
+		}
+		aside nav ul li .target-h2{
+			display: block;
+			color: #99979c;
+			text-decoration: none;
+			text-indent: 1em;
+		}
+		/*导航栏跳转*/
+		.target-fix {
+		    position: relative;
+		    top: -97px; 
+		    display: block;
+		    height: 0; 
+		    overflow: hidden;
+		}
+		ul{list-style:none; }
+	</style>
+	<script>
+	</script>
+</head>
+<body>
+	<header></header>
+	<article>
+		<h2>DOM（属于window对象的一部分）</h2>
+		<br/>
+		<h3>Document对象</h3>
+		<h4>属性</h4>
+		<section>
+			<h5></h5>
+			<p></p>
+		</section>
+		<h4>方法</h4>
+		<section>
+			<h5>获取元素</h5>
+			<p>getElementById() 引用指定ID的对象</p>
+			<p>getElementsByName() 方法可返回带有指定名称的对象的集合</p>
+			<p>getElementsByClassName() 方法返回文档中所有指定类名的元素集合，作为 NodeList 对象</p>
+			<p>getElementsByTagName() 引用指定标签名的对象</p>
+			<p>querySelector() 获取一个CSS选择器的对象</p>
+			<p>querySelectorAll() 获取一组CSS选择器的对象</p>
+		</section>
+		<section>
+			<h5>其他</h5>
+			<p>write() 方法可向文档写入 HTML 表达式或 JavaScript 代码</p>
+		</section>
+		<br/>
+		<h3>Element对象</h3>
+		<h4>样式</h4>
+			<section>
+				<h5>属性</h5>
+					<p>style 属性设置或返回元素的属性</p>
+					<p>classList 属性返回元素的类名</p>
+					<p>className 设置或返回元素的 class 属性</p>
+			</section>
+			<section>
+				<h5>方法</h5>
+					<p>classList.add() 添加类</p>
+					<p>classList.remove() 删除类</p>
+			</section>
+		<h4>属性</h4>
+		<ul>	
+			<li>currentStyle 行间样式（只兼容IE）</li>
+			<li>getComputedStyle（）获取计算后的样式（不兼容IE）</li>
+			<li>innerHTML 返回带标签的文本</li>
+			<li>innerText 返回不带标签的纯文本</li>
+			<li>className 设置或返回元素的 class 属性</li>
+			<li>id 设置或返回元素的 id</li>
+			<li>length 返回 NodeList 中的节点数</li>
+			<li>parentNode 返回元素的父节点</li>
+			<li>nextElementSibling 返回位于相同节点树层级的下一个节点</li>
+			<li>previousElementSibling 返回位于相同节点树层级的前一个元素</li>
+			<li>childNodes 属性返回节点的子节点集合</li>
+			<li>children 属性返回节点的子节点集合（非标准属性）</li>
+			<li>firstElementChild 返回元素的首个子节点</li>
+			<li>lastElementChild 返回元素的最后一个子元素</li>
+			<li>offsetTop 返回元素的垂直偏移位置</li>
+			<li>offsetLeft 返回元素的水平偏移位置</li>
+			
+		</ul>
+		<h4>方法</h4>
+		<ul>
+			<li>remove() 从下拉列表中删除一个选项</li>
+			<li>removeChild() 从元素中移除子节点</li>
+			<li>appendChild() 向节点的子节点列表末尾添加新的子节点</li>
+			<li>insertBefore() 在已有的子节点之前插入一个新的子节点</li>
+			<li>setAttribute() 把指定属性设置或更改为指定值</li>
+			<li>this 当前对象</li>
+		</ul>
+		<br/>
+		<h3>Attribute对象</h3>
+		<h4>属性</h4>
+		<ul>	
+			<li></li>
+		</ul>
+		<h4>方法</h4>
+		<ul>
+			<li></li>
+		</ul>
+		<br/><hr /><br/>
+		<h2>BOM</h2>
+		<br/>
+		<h3>Windows对象</h3>
+		<h4>属性</h4>
+		<section>
+			<h5></h5>
+			<p>Window 对象表示浏览器中打开的窗口</p>
+			<p>Document 对象使我们可以从脚本中对 HTML 页面中的所有元素进行访问</p>
+		</section>
+		<h4>方法</h4>
+		<section>
+			<h5></h5>
+			<p>alert() 方法用于显示带有一条指定消息和一个 OK 按钮的警告框</p>
+			<p>prompt() 方法用于显示可提示用户进行输入的对话框</p>
+			<p>setInterval() 方法可按照指定的周期（以毫秒计）来调用函数或计算表达式</p>
+			<p>setTimeout() 方法用于在指定的毫秒数后调用函数或计算表达式</p>
+			<p>clearInterval() 方法可取消由 setInterval() 设置的 timeout</p>
+			<p>clearTimeout() 方法可取消由 setTimeout() 方法设置的 timeout</p>
+			<p>open() 方法用于打开一个新的浏览器窗口或查找一个已命名的窗口</p>
+			<p>close() 方法用于关闭浏览器窗口</p>
+		</section>
+		<br/>
+		<h3>console对象</h3>
+		<h4>属性</h4>
+		<section>
+			<h5></h5>
+			<p>console 对象提供了访问浏览器调试模式的信息到控制台</p>
+		</section>
+		<h4>方法</h4>
+		<section>
+			<h5></h5>
+			<p>log() 控制台输出</p>
+			<p>warn() 控制台警告输出</p>
+			<p>error() 控制台错误输出</p>
+		</section>
+		<br/><hr /><br/>
+		<h2>内置对象</h2>
+		<br/>
+		<h3>全局对象</h3>
+		<ul>
+			<li>parseInt() 函数可解析一个字符串，并返回一个整数</li>
+			<li>parseFloat() 函数可解析一个字符串，并返回一个浮点数</li>
+			<li>isNaN() 函数用于检查其参数是否是非数字值</li>
+		</ul>
+		<br/>
+		<h3>Number对象</h3>
+		<ul>
+			<li>NaN 属性是代表非数字值的特殊值</li>
+			<li>Number() 方法转化为数字类型</li>
+		</ul>
+		<br/>
+		<h3>String对象</h3>
+		<ul>
+			<li>length 属性可返回字符串中的字符数目</li>
+			<li>charAt() 返回在指定位置的字符</li>
+		</ul>
+		<br/>
+		<h3>Array对象</h3>
+		<ul>
+			<li>length 属性可设置或返回数组中元素的数目</li>
+			<li>push() 方法可向数组的末尾添加一个或多个元素，并返回新的长度</li>
+			<li>pop() 方法用于删除并返回数组的最后一个元素</li>
+			<li>shift() 方法用于把数组的第一个元素从其中删除，并返回第一个元素的值</li>
+			<li>unshift() 方法可向数组的开头添加一个或更多元素，并返回新的长度值</li>
+		</ul>
+		<br/>
+		<h3>boolen对象</h3>
+		<ul>
+			<li>toString() 方法可把一个逻辑值转换为字符串，并返回结果</li>
+		</ul>
+		<br/>
+		<h3>RegExp对象（正则表达式）</h3>
+		<ul>
+			<li>exec() 方法用于检索字符串中的正则表达式的匹配</li>
+			<li>test() 方法用于检测一个字符串是否匹配某个模式</li>
+		</ul>
+		<br/>
+		<h3>Date对象</h3>
+		<ul>
+			<li></li>
+		</ul>
+		<br/>
+		<h3>Math对象</h3>
+		<ul>
+			<li>log() 方法可返回一个数的自然对数/dir()方法 数组</li>
+		</ul>
+		<h3>object对象</h3>
+		<ul>
+			
+		</ul>
+		<br/><hr /><br/>
+		<h3>其他</h3>
+		<ul>
+			
+			<li>arguments对象</li>
+			<li>getComputedStyle()返回行间样式</li>
+			<li>自定义属性index（添加索引值）</li>
+			<li>window.document.getElementById('id').style.width（window对象-DOM对象-element对象-attribute对象-style对象）</li>
+		</ul>
+	</article>
+</body>
+</html>

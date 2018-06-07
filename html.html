@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>语义标签</title>
+	<style type="text/css">
+		*{margin:0px; padding:0px;}
+		header{
+			width: 100%;
+			height: 66px;
+			background-color: #006f84;
+			position: fixed;
+			top: 0;
+			left: 0;
+		}
+		article{
+			margin-top: 66px; 
+			margin-left: 222px;
+			margin-right: 200px;
+			padding-top: 6px;
+			padding-left: 44px;
+			padding-bottom: 66px;
+			line-height: 35px;
+		}
+		aside{
+			width: 200px;
+			height: 100%;
+			background-color: #fff;
+			padding-top: 22px;
+			position: fixed;
+			top:66px;
+			right: 0;
+		}
+		aside nav{
+			width: 199px;
+			border-left: 1px solid rgba(0,0,0,0.1);
+		}
+		aside nav ul{
+			list-style: none;
+			padding: 0 33px;
+			line-height: 30px;
+			color: rgba(0,0,0,0.65);
+		}
+		/*导航栏跳转*/
+		aside nav ul li .target-h1{
+			text-decoration: none;
+			color: #99979c;
+		}
+		aside nav ul li .target-h2{
+			display: block;
+			color: #99979c;
+			text-decoration: none;
+			text-indent: 1em;
+		}
+		/*导航栏跳转*/
+		.target-fix {
+		    position: relative;
+		    top: -97px; 
+		    display: block;
+		    height: 0; 
+		    overflow: hidden;
+		}
+		h1{font-size:22px; margin-top:25px; margin-bottom:10px;}
+		h2{font-size:20px; margin-top:25px; margin-bottom:10px;}
+		/*标签*/
+		h3{font-size:18px; margin-bottom:10px; font-weight: normal; cursor: pointer;}
+		h3:hover{background-color: #f80;}
+		/*属性*/
+		details summary{
+			font-size:16px; 
+			color:#666; 
+			margin-bottom:10px;}
+		/*值*/
+		details p{
+			font-size:14px; 
+			color:#888; 
+			margin-bottom:10px;}
+	</style>
+	<script>
+		window.onload=function(){
+			var aH1=document.getElementsByTagName('h1');
+			// var aH2=document.getElementsByTagName('h2');
+			var aH3=document.getElementsByTagName('h3');
+			for (var i = 0; i < aH3.length; i++) {
+				aH3[i].onclick=function(){
+					var aChild=this.parentNode.children;
+					this.nextElementSibling.style.display==="none"?this.nextElementSibling.style.display="block":this.nextElementSibling.style.display="none";
+					if (this.nextElementSibling.style.display==="none") {
+						for (var i = 1; i < aChild.length; i++) {
+							aChild[i].style.display="none";
+						}
+					}
+					else{
+						for (var i = 1; i < aChild.length; i++) {
+							aChild[i].style.display="block";
+						}
+					}
+					
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<header></header>
+	<main>
+		<article>
+			<h1><a class="target-fix" id="!DOCTYPE"></a>!DOCTYPE</h1>
+				<section>
+					<h3>!DOCTYPE 声明文档类型</h3>
+						<details>
+							<summary>HTML</summary>
+							<p>备注：!DOCTYPE不属于HTML标签</p>
+							<p>备注：HTML5不基于SGML，所以不需要引用DTD</p>
+						</details>
+				</section>
+			<h1 ><a class="target-fix" id="html"></a>html</h1>
+				<section>
+					<h3>html 标签定义这是一个HTML文档</h3>
+						<details>
+							<summary>xmln 属性定义XML命名空间</summary>
+							<p>http://www.w3.org/1999/xhtml 固定值</p>
+							<p>备注：HTML5不需要引用</p>
+						</details>
+				</section>
+			<h1><a class="target-fix" id="head"></a>head</h1>
+				<section>
+				    <h3>head 标签定义文档的头部</h3>
+				</section>
+				<section>
+				    <h3>meta 标签定义文档的元信息</h3>
+					    <details>
+					        <summary>charset 属性定义文档的字符编码</summary>
+					        <p>UTF-8 万国码</p>
+					        <p>GB2312 汉字编码</p>
+					        <p>备注：HTML5中代替http-equiv="Content-Type" content="text/html; charset=""；</p>
+					        <p>引申：字符集</p>
+					    </details>
+					    <details>
+					        <summary>name 属性定义 content 属性的信息/值的名称</summary>
+					        <p>viewport</p>
+					    </details>
+					    <details>
+					        <summary>content 属性定义与 http-equiv 或 name 属性相关的元信息</summary>
+					        <p>width=device-width 页面宽度等于设备宽度</p>
+					        <p>initial-scale=1 初始缩放值</p>
+					        <p>shrink-to-fit=no 不允许用户缩放</p>
+					    </details>
+				</section>
+				<section>
+				    <h3>title 标签定义文档的标题</h3>
+				</section>
+				<section>
+				    <h3>link 标签定义文档与外部资源的关系</h3>
+					    <details>
+					        <summary>type 属性定义被链接文档/资源的 MIME 类型</summary>
+					        <p>text/css</p>
+					        <p>text/javascript</p>
+					    </details>
+					    <details>
+					        <summary>href 属性定义被链接文档的位置</summary>
+					        <p>url 路径</p>
+					    </details>
+					    <details>
+					        <summary>rel 属性定义当前文档与被链接文档/资源之间的关系</summary>
+					        <p>stylesheet 表示该文档的外部样式表</p>
+					        <p>icon 表示该文档的图标</p>
+					    </details>
+					    <details>
+					        <summary>media 属性定义被链接文档将被显示在什么设备上</summary>
+					        <p>screen 计算机屏幕（默认）</p>
+					    </details>
+				</section>
+				<section>
+				    <h3>base 标签定义页面所有链接默认地址或默认目标</h3>
+					    <details>
+					        <summary>href 属性规定作为基准 URL 在页面中使用的 URL</summary>
+					        <p>url 路径</p>
+					    </details>
+					    <details>
+					        <summary>target 属性在何处打开页面上的链接</summary>
+					        <p>_self 默认值。在被点击时的同一框架中打开被链接文档</p>
+					        <p>_blank 在新窗口中打开被链接文档</p>
+					        <p>iframeName 在指定框架打开</p>
+					        <p>备注：该属性会被每个链接中的 target 属性覆盖</p>
+					    </details>
+				</section>
+				<section>
+				    <h3>style 标签定义 HTML 文档的样式信息</h3>
+					    <details>
+					        <summary>type 属性定义内容类型</summary>
+					        <p>text/css</p>
+					    </details>
+				</section>
+				<section>
+				    <h3>script 标签定义客户端脚本</h3>
+					    <details>
+					        <summary>type 属性定义内容类型</summary>
+					        <p>text/javascript</p>
+					    </details>
+					    <details>
+					        <summary>src 属性外部脚本的 URL</summary>
+					    </details>
+				</section>
+			<h1><a class="target-fix" id="body"></a>body</h1>
+				<section>
+					<h3>body 此元素定义文档的主体</h3>
+						<details>
+							<summary>scrollTop 属性返回滚动的距离</summary>
+								<p>通常在js中获取滚动距离时使用</p>
+						</details>
+				</section>
+			<h2><a class="target-fix" id="布局"></a>布局</h2>
+				<section>
+					<h3>div 定义 HTML 文档中的分隔（division）或部分（section）</h3>
+				</section>
+				<section>
+					<h3>header 标签定义文档的页眉（介绍信息）</h3>
+				</section>
+				<section>
+					<h3>footer 标签定义 section 或 document 的页脚</h3>
+				</section>
+				<section>
+					<h3>main 标签规定文档的主要内容</h3>
+				</section>
+				<section>
+					<h3>aside 标签定义其所处内容之外的内容</h3>
+				</section>
+				<section>
+					<h3>span 用于对文档中的行内元素进行组合</h3>
+				</section>
+			<h2><a class="target-fix" id="文本"></a>文本</h2>
+				<section>
+					<h3>h1-h6 定义标题</h3>
+				</section>
+				<section>
+					<h3>p 定义段落</h3>
+				</section>
+				<section>
+					<h3>article 标签定义独立的内容</h3>
+				</section>
+				<section>
+					<h3>section 标签定义文档中的节（section、区段）</h3>
+				</section>
+				<section>
+					<h3>nav 标签定义导航链接的部分</h3>
+				</section>
+				<section>
+					<h3>address 标签定义文档作者或拥有者的联系信息</h3>
+				</section>
+				<section>
+					<h3>details 定义摘要与详情</h3>
+				</section>
+				<section>
+					<h3>summary 定义摘要</h3>
+				</section>
+				<section>
+					<h3>strong 粗体定义强调文本</h3>
+				</section>
+			<h2><a class="target-fix" id="链接"></a>链接</h2>
+				<section>
+				    <h3>a 标签定义超链接</h3>
+					    <details>
+					        <summary>href 属性定义链接的目标 URL</summary>
+					        <p>URL</p>
+					        <p>id 锚点</p>
+					        <p># 返回顶部</p>
+					        <p>avascript:</p>
+					    </details>
+					    <details>
+					        <summary>target 属性定义在何处打开</summary>
+					        <p>self 默认值。在被点击时的同一框架中打开被链接文档</p>
+					        <p>_blank 在新窗口中打开被链接文档</p>
+					        <p>iframeName 在指定框架打开</p>
+					    </details>
+				</section>
+			<h2><a class="target-fix" id="媒体"></a>媒体</h2>
+				<section>
+				    <h3>img 标签定义图像</h3>
+					    <details>
+					        <summary>src 属性规定图像的来源</summary>
+					        <p>URL</p>
+					    </details>
+					    <details>
+					        <summary>alt 属性规定图像的替代文本</summary>
+					        <p>text</p>
+					    </details>
+					    <details>
+					        <summary>width 属性规定图像的宽度</summary>
+					        <p>pixels,%</p>
+					    </details>
+					    <details>
+					        <summary>height 属性规定图像的高度</summary>
+					        <p>pixels,%</p>
+					    </details>
+				</section>
+				<section>
+				    <h3>video 标签定义视频</h3>
+				</section>
+				<section>
+				    <h3>audio 标签定义音频</h3>
+				</section>
+			<h2><a class="target-fix" id="列表"></a>列表</h2>
+				<section>
+				    <h3>ol 定义有序列表</h3>
+					    <details>
+					        <summary>type 规定在列表中使用的标记类型</summary>
+					        <p>1</p>
+					        <p>A</p>
+					        <p>a</p>
+					        <p>I</p>
+					        <p>i</p>
+					    </details>
+					    <details>
+					        <summary>start 规定有序列表的起始值</summary>
+					        <p>number</p>
+					    </details>
+				</section>
+				<section>
+				    <h3>ul 定义无序列表</h3>
+				</section>
+				<section>
+				    <h3>li 定义列表项</h3>
+				</section>
+				<section>
+				    <h3>dl 定义了定义列表（definition list）</h3>
+				</section>
+				<section>
+				    <h3>dt 定义列表项</h3>
+				</section>
+				<section>
+				    <h3>dd 描述列表项</h3>
+				</section>
+			<h2><a class="target-fix" id="表格"></a>表格</h2>
+				<section>
+				    <h3>table</h3>
+				</section>
+				<section>
+				    <h3>thead</h3>
+				</section>
+				<section>
+				    <h3>tbody</h3>
+				</section>
+				<section>
+				    <h3>tfoot</h3>
+				</section>
+				<section>
+				    <h3>th</h3>
+				</section>
+				<section>
+				    <h3>tr</h3>
+				</section>
+				<section>
+				    <h3>td</h3>
+				</section>
+				<section>
+				    <h3>caption</h3>
+				</section>
+			<h2><a class="target-fix" id="表单"></a>表单</h2>
+				<section>
+		            <h3>form 标签用于创建供用户输入的 HTML 表单</h3>
+		        </section>
+		        <section>
+		            <h3>input 规定用户可输入数据的输入字段</h3>
+		                <details>
+		                    <summary>type 属性规定 input 元素的类型。</summary>
+		                        <p>password 定义密码字段</p>
+		                        <p>text 定义单行输入字段</p>
+		                        <p>checkbox 定义复选框</p>
+		                        <p>radio 定义单选按钮（同name按钮互斥）</p>
+		                        <p>submit 定义提交按钮</p>
+		                        <p>reset 定义重置按钮</p>
+		                        <p>button 定义可点击的按钮</p>
+		                        <p>image 定义图片按钮</p>
+		                </details>
+		                <details>
+		                    <summary>value 规定元素的默认值</summary>
+		                </details>
+		                <details>
+		                    <summary>checked 规定当页面加载时是否预先选择该 input 元素</summary>
+		                </details>                
+		                <details>
+		                    <summary>placeholder 规定帮助用户填写输入字段的提示</summary>
+		                </details>
+		        </section>
+		        <section>
+		            <h3>button</h3>
+		                <details>
+		                    <summary>type 属性规定 input 元素的类型。</summary>
+		                </details>                
+		                <details>
+		                    <summary>value</summary>
+		                </details>
+		        </section>
+		        <section>
+		            <h3>textarea</h3>
+		        </section>
+		        <section>
+		            <h3>select 创建下拉列表-optgroup/option-detalist</h3>
+		        </section>
+		        <section>
+		            <h3>datalist</h3>
+		        </section>
+		        <section>
+		            <h3>label</h3>
+		        </section>
+			<h2><a class="target-fix" id="框架"></a>框架</h2>
+				<section>
+					<h3>iframe 标签定义一个内联框架</h3>
+						<details>
+							<summary>src 属性定义在iframe显示的文档链接</summary>
+								<p>url 路径</p>
+						</details>
+				</section>
+			<h2><a class="target-fix" id="功能"></a>功能</h2>
+				<section>
+					<h3>！-- -- 标签用于在源代码中插入注释</h3>
+				</section>
+				<section>
+					<h3>hr 标签定义一个水平线，表示定义内容中的主题变化</h3>
+				</section>
+				<section>
+					<h3>br 标签定义一个换行符</h3>
+				</section>
+			<h1><a class="target-fix" id="全局属性"></a>全局属性</h1>
+				<section>
+					<h2></h2>
+						<details>
+							<summary>id 属性规定 HTML 元素的唯一的 id。</summary>
+								<p>id 规定元素的唯一 id。</p>
+						</details>
+						<details>
+							<summary>class 属性定义了元素的类名。</summary>
+								<p>classname 规定元素的类的名称。</p>
+						</details>
+						<details>
+							<summary>title 属性规定关于元素的额外信息。</summary>
+								<p>text 规定元素的工具提示文本（tooltip text）。</p>
+						</details>
+						<details>
+							<summary>style 属性规定元素的行内样式（inline style）。</summary>
+								<p>style_definitions 一个或多个由分号分隔的 CSS 属性和值。</p>
+						</details>
+				</section>
+			<h1><a class="target-fix" id="事件属性"></a>事件属性</h1>
+				<section>
+					<h2>鼠标事件</h2>
+						<details>
+							<summary>onmousemove 属性在鼠标指针移动到元素时触发。</summary>
+								<p>script 规定该onmousemove事件触发时执行的脚本。</p>
+						</details>
+						<details>
+							<summary>onmouseout 属性在鼠标指针移除元素时触发。</summary>
+								<p></p>
+						</details>
+						<details>
+							<summary>onmouseenter 属性在鼠标指针移动到元素上时触发</summary>
+								<p>不支持冒泡</p>
+						</details>
+						<details>
+							<summary>onmouseleave 属性当鼠标指针离开被选元素时触发</summary>
+								<p>不支持冒泡</p>
+						</details>
+						<details>
+							<summary>onclick 属性在单击鼠标时触发。</summary>
+								<p></p>
+						</details>
+						<details>
+							<summary>onscroll 事件在元素滚动条在滚动时触发</summary>
+								<p>备注：结合scrollTop条件判断 document.documentElement.scrollTop||document.body.scrollTop</p>
+						</details>
+				</section>
+				<section>
+					<h2>windows事件</h2>
+						<details>
+							<summary>onload 属性在文档对象加载完成后触发。</summary>
+						</details>
+				</section>
+				<section>
+					<h2>表单事件</h2>
+						<details>
+							<summary>onfocus 属性在元素获得焦点时触发</summary>
+						</details>
+						<details>
+							<summary>onblur 属性在元素失去焦点时触发</summary>
+						</details>
+				</section>
+			<h1><a class="target-fix" id="字符实体"></a>字符实体</h1>
+				<section>
+					<h2></h2>
+						<details>
+							<summary>字符实体</summary>
+								<p>&nbsp; &amp;nbsp;</p>
+								<p>< &amp;lt;</p>
+								<p>> &amp;gt;</p>
+								<p>" &amp;quot;</p>
+								<p>& &amp;amp;</p>
+								<p>© &amp;copy;</p>
+						</details>
+				</section>
+		</article>
+	</main>
+	<aside>
+		<nav>
+			<ul>
+				<li><a href="#!DOCTYPE" class="target-h1">!DOCTYPE</a></li>
+				<li><a href="#html" class="target-h1">html</a></li>
+				<li><a href="#head" class="target-h1">head</a></li>
+				<li><a href="#body" class="target-h1">body</a></li>
+				<li><a href="#布局" class="target-h2">布局</a></li>
+				<li><a href="#文本" class="target-h2">文本</a></li>
+				<li><a href="#链接" class="target-h2">链接</a></li>
+				<li><a href="#媒体" class="target-h2">媒体</a></li>
+				<li><a href="#列表" class="target-h2">列表</a></li>
+				<li><a href="#表格" class="target-h2">表格</a></li>
+				<li><a href="#表单" class="target-h2">表单</a></li>
+				<li><a href="#框架" class="target-h2">框架</a></li>
+				<li><a href="#功能" class="target-h2">功能</a></li>
+				<li><a href="#全局属性" class="target-h1">全局属性</a></li>
+				<li><a href="#事件属性" class="target-h1">事件属性</a></li>
+				<li><a href="#字符实体" class="target-h1">字符实体</a></li>
+			</ul>
+		</nav>
+	</aside>
+</body>
+</html>

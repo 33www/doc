@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>语义标签</title>
+	<style type="text/css">
+		*{margin:0px; padding:0px;}
+		body{margin:25px; line-height:35px;}
+		h1{font-size:22px; margin-top:25px; margin-bottom:10px;}
+		h2{font-size:20px; margin-top:25px; margin-bottom:10px; cursor: pointer;}
+		h2:hover{background-color: #f80;}
+		summary{font-size:18px; color:#444; margin-bottom:10px;}
+		p{font-size:16px; color:#666; margin-bottom:10px;}
+
+	</style>
+
+</head>
+<body>
+	<article>
+		<h1>布局</h1>
+			<section>
+				<h2>弹性盒模型</h2>
+				<details>
+					<summary>container 流宽</summary>
+						<p>@media (min-width: 1200px)：max-width: 1140px;</p>
+						<p>@media (min-width: 992px)：max-width: 960px;</p>
+						<p>@media (min-width: 768px)：max-width: 720px;</p>
+						<p>@media (min-width: 576px)：max-width: 540px;</p>
+						<p>width:100%</p>
+						<p>margin:0 auto</p>
+						<p>padding: 0 15px</p>
+				</details>
+				<details>
+					<summary>container-fluid 定宽</summary>
+						<p>width:100%</p>
+				</details>
+				<details>
+					<summary>row 行</summary>
+						<p></p>
+				</details>
+				<details>
+					<summary>col 列</summary>
+						<p>max-width: 100%;</p>
+						<p>min-height: 1px;</p>
+						<p>flex-basis: 0;</p>
+						<p>flex-grow: 1;</p>
+				</details>
+				<h2>通用</h2>
+				<details>
+					<summary>*</summary>
+						<p>box-sizing: border-box;</p>
+				</details>
+				<details>
+					<summary>body</summary>
+						<p>font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";</p>
+						<p>font-size: 1rem;</p>
+						<p>font-weight: 400;</p>
+						<p>line-height: 1.5;</p>
+						<p>color: #212529;</p>
+						<p>text-align: left;</p>
+						<p>background-color: #fff;</p>
+				</details>
+			</section>
+		<h1>模板</h1>
+			<section>
+				<h2>列表</h2>
+				<details>
+					<summary>dl-horizontal 定义列表-水平模式</summary>
+				</details>
+				<h2>表格</h2>
+				<details>
+					<summary>table 内边距-分割线</summary>
+				</details>
+				<details>
+					<summary>table-striped 隔行变色</summary>
+				</details>
+				<details>
+					<summary>table-bordered 带边框的表格</summary>
+				</details>
+				<details>
+					<summary>table-hover 鼠标悬停</summary>
+				</details>
+				<h2>表单</h2>
+			</section>
+		<h1>语法</h1>
+			<section>
+				<h2>导入</h2>
+					<p>加载核心库：bootstrap.css/jq.js/popper.js/bootstrap.js</p>
+					<p>适配移动端：&lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"></p>
+				<h2>基于less和sass</h2>
+			</section>
+	</article>
+</body>
+</html>

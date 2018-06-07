@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>样式</title>
+	<style type="text/css">
+		*{margin:0px; padding:0px;}
+		header{
+			width: 100%;
+			height: 66px;
+			background-color: #006f84;
+			position: fixed;
+			top: 0;
+			left: 0;
+		}
+		article{
+			margin-top: 66px; 
+			margin-left: 222px;
+			margin-right: 200px;
+			padding-top: 6px;
+			padding-left: 44px;
+			padding-bottom: 66px;
+			line-height: 35px;
+		}
+		aside{
+			width: 200px;
+			height: 100%;
+			background-color: #fff;
+			padding-top: 22px;
+			position: fixed;
+			top:66px;
+			right: 0;
+		}
+		aside nav{
+			width: 199px;
+			border-left: 1px solid rgba(0,0,0,0.1);
+		}
+		aside nav ul{
+			list-style: none;
+			padding: 0 33px;
+			line-height: 30px;
+			color: rgba(0,0,0,0.65);
+		}
+		/*导航栏跳转*/
+		aside nav ul li .target-h1{
+			text-decoration: none;
+			color: #99979c;
+		}
+		aside nav ul li .target-h2{
+			display: block;
+			color: #99979c;
+			text-decoration: none;
+			text-indent: 1em;
+		}
+		/*导航栏跳转*/
+		.target-fix {
+		    position: relative;
+		    top: -97px; 
+		    display: block;
+		    height: 0; 
+		    overflow: hidden;
+		}
+		h1{font-size:22px; margin-top:25px; margin-bottom:10px;}
+		h2{font-size:20px; margin-top:25px; margin-bottom:10px;}
+		h3{font-size:18px; color:#444; margin-bottom:10px; font-weight: normal;}
+		summary{font-size:18px; color:#444; margin-bottom:10px;}
+		p{font-size:16px; color:#666; margin-bottom:10px;}
+	</style>
+</head>
+<body>
+	<header></header>
+	<main>
+		<article>
+			<h1><a class="target-fix" id="Box 盒子模型"></a>Box 盒子模型</h1>
+				<section>
+					<h2><a class="target-fix" id="dimension 尺寸"></a>dimension 尺寸</h2>
+						<details>
+							<summary>width 属性设置元素的宽度</summary>
+								<p>length</p>
+								<p>%</p>
+						</details>
+						<details>
+							<summary>height 设置元素高度</summary>
+								<p>length</p>
+								<p>%</p>
+						</details>
+				</section>
+				<section>
+					<h2><a class="target-fix" id="border 边框"></a>border 边框</h2>
+						<details>
+							<summary>border-width 规定边框的宽度</summary>
+								<p>length</p>
+						</details>
+						<details>
+							<summary>border-style 规定边框的样式</summary>
+								<p>solid 定义实线</p>
+								<p>dashed 定义虚线</p>
+						</details>
+						<details>
+							<summary>border-color 规定边框的颜色</summary>
+								<p>color_name</p>
+								<p>hex_number</p>
+								<p>rgb_number</p>
+								<p>transparent 默认。背景颜色为透明</p>
+						</details>
+						<details>
+							<summary>border-radius 属性是一个简写属性，用于设置四个 border-*-radius 属性</summary>
+								<p>length</p>
+								<p>%</p>
+						</details>
+				</section>
+				<section>
+					<h2><a class="target-fix" id="background 背景"></a>background 背景</h2>
+						<details>
+							<summary>background-color 规定要使用的背景颜色</summary>
+								<p>color_name</p>
+								<p>hex_number</p>
+								<p>rgb_number</p>
+								<p>transparent 默认。背景颜色为透明</p>
+						</details>
+						<details>
+							<summary>background-image 规定要使用的背景图像</summary>
+								<p>url('URL')</p>
+								<p>innear-gradient(to direction,color1 %,color2 %) 渐变背景色</p>
+						</details>
+						<details>
+							<summary>background-position 规定背景图像的位置</summary>
+								<p>top right bottom left center</p>
+								<p>px px</p>
+						</details>
+						<details>
+							<summary>background-origin 规定背景图片的定位区域</summary>
+								<p>padding-box</p>
+								<p>border-box</p>
+								<p>content-box</p>
+						</details>
+						<details>
+							<summary>background-clip 规定背景的绘制区域</summary>
+								<p>padding-box</p>
+								<p>border-box</p>
+								<p>content-box</p>
+						</details>
+						<details>
+							<summary>background-repeat 规定如何重复背景图像</summary>
+								<p>repeat 默认。背景图像将在垂直方向和水平方向重复</p>
+								<p>no-repeat 背景图像将仅显示一次</p>
+								<p>repeat-x 背景图像将在水平方向重复</p>
+								<p>repeat-y 背景图像将在垂直方向重复</p>
+						</details>
+						<details>
+							<summary>background-size 规定背景图片的尺寸</summary>
+								<p>length 设置背景图像的高度和宽度</p>
+								<p>%</p>
+								<p>cover</p>
+								<p>contain</p>
+						</details>
+				</section>
+				<section>
+					<h2><a class="target-fix" id="定位"></a>定位</h2>
+						<details>
+							<summary>margin 简写属性在一个声明中设置所有外边距属性</summary>
+								<p>length</p>
+								<p>%</p>
+						</details>
+						<details>
+							<summary>padting 简写属性在一个声明中设置所有内边距属性</summary>
+								<p>length</p>
+								<p>%</p>
+						</details>
+						<details>
+			            	<summary>float 属性定义元素在哪个方向浮动</summary>
+			            		<p>left 元素向左浮动</p>
+			            		<p>right 元素向右浮动</p>
+			            </details>
+						<details>
+							<summary>position 属性规定元素的定位类型</summary>
+				                <p>absolute 绝对定位，以父级元素为参照物，所以父级元素应设置相对定位</p>
+				                <p>relative 相对定位,以自身为参照物</p>
+				                <p>fixed 固定定位，以浏览器为参照物</p>
+						</details>
+			            <details>
+			            	<summary>top 属性规定元素的顶部边缘</summary>
+			            		<p>length</p>
+								<p>%</p>
+			            </details>
+			            <details>
+			            	<summary>right 属性规定元素的右边缘</summary>
+			            		<p>length</p>
+								<p>%</p>
+			            </details>
+			            <details>
+			            	<summary>bottom 属性规定元素的底部边缘</summary>
+			            		<p>length</p>
+								<p>%</p>
+			            </details>
+			            <details>
+			            	<summary>left 属性规定元素的左边缘</summary>
+			            		<p>length</p>
+								<p>%</p>
+			            </details>
+			            <details>
+			            	<summary>z-index 属性设置元素的堆叠顺序</summary>
+			            		<p>number 设置元素的堆叠顺序</p>
+			            </details>
+			            <details>
+			            	<summary>vertical-align 属性设置元素的垂直对齐方式</summary>
+			            	    <p>baseline 默认。元素放置在父元素的基线上</p>
+			            	    <p>top 把元素的顶端与行中最高元素的顶端对齐</p>
+			            	    <p>middle 把此元素放置在父元素的中部</p>
+			            	    <p>bottom 把元素的顶端与行中最低的元素的顶端对齐</p>
+			            </details>
+			            <details>
+			            	<summary>transform 属性向元素应用 2D 或 3D 转换</summary>
+			            		<p>translate(x,y) 平移</p>
+			            		<p>rotate(angle) 旋转</p>
+			            		<p>scale(x,y) 缩放</p>
+			            </details>
+			    </section>
+			    <section>
+			    	<h2><a class="target-fix" id="显示"></a>显示</h2>
+					    <details>
+					        <summary>display 属性规定元素应该生成的框的类型</summary>
+					            <p>inline 默认值。此元素会被显示为内联元素，元素前后没有换行符</p>
+					            <p>block 此元素将显示为块级元素，此元素前后会带有换行符</p>
+					            <p>inline-block 行内块元素</p>
+					            <p>flex 弹性盒模型</p>
+					            <p>none 此元素不会被显示</p>
+					    </details>
+					    <details>
+					        <summary>visibility 属性规定元素是否可见</summary>
+					            <p>visible 默认值。元素是可见的</p>
+					            <p>hidden 元素是不可见的</p>
+					    </details>
+					    <details>
+					        <summary>clip 属性剪裁绝对定位元素</summary>
+					            <p>auto 默认值。不应用任何剪裁</p>
+					            <p>rect (top, right, bottom, left)</p>
+					    </details>
+					    <details>
+					        <summary>overflow 属性规定当内容溢出元素框时发生的事情</summary>
+					            <p>visible 默认值。内容不会被修剪，会呈现在元素框之外</p>
+					            <p>hidden 内容会被修剪，并且其余内容是不可见的</p>
+					            <p>scroll 内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容</p>
+					    </details>
+					    <details>
+			            	<summary>clear 属性规定元素的哪一侧不允许其他浮动元素</summary>
+			            		<p>none 默认值。允许浮动元素出现在两侧</p>
+			            		<p>both 在左右两侧均不允许浮动元素</p>
+			            </details>
+					    <details>
+							<summary>opacity 属性设置元素的不透明级别</summary>
+								<p>value 规定不透明度。从 0.0 （完全透明）到 1.0（完全不透明）</p>
+						</details>
+					    <details>
+							<summary>box-shadow 向方框添加一个或多个阴影</summary>
+								<p>h-shadow</p>
+								<p>v-shadow</p>
+						</details>
+						<details>
+							<summary>perspective 规定 3D 元素的透视效果</summary>
+								<p>number</p>
+						</details>
+						<details>
+							<summary>backface-visibility</summary>
+								<p>visible 背面是可见的</p>
+								<p>hidden 背面是不可见的</p>
+						</details>
+					    <details>
+					        <summary>box-sizing 属性允许您以特定的方式定义匹配某个区域的特定元素</summary>
+					            <p>content-box 默认值。在内容框外绘制内边距和边框</p>
+					            <p>border-box 在内容框内绘制内边距和边框</p>
+					    </details>
+					    <details>
+					        <summary>cursor 属性规定要显示的光标的类型（形状）</summary>
+					            <p>default 默认光标（通常是一个箭头）</p>
+					            <p>pointer 光标呈现为指示链接的指针（一只手）</p>
+					    </details>
+				</section>
+				<section>
+			    	<h2><a class="target-fix" id="flex 弹性盒模型"></a>flex 弹性盒模型</h2>
+					    <details>
+					        <summary>flex-wrap 属性规定flex容器是单行或者多行，同时横轴的方向决定了新行堆叠的方向</summary>
+					            <p>nowrap 默认值。规定灵活的项目不拆行或不拆列</p>
+					            <p>wrap 规定灵活的项目在必要的时候拆行或拆列</p>
+					    </details>
+					    <details>
+					        <summary>flex-grow 属性用于设置或检索弹性盒的扩展比率</summary>
+					            <p>number</p>
+					    </details>
+					    <details>
+					    	<summary>flex-basis 属性用于设置或检索弹性盒伸缩基准值</summary>
+					    		<p>number 一个长度单位或者一个百分比，规定灵活项目的初始长度</p>
+					    </details>
+					    <details>
+					        <summary>justify-content: space-around;内容居中留白</summary>
+					    </details>
+					    <details>
+					        <summary>align-items: center;子元素上下对齐</summary>
+					    </details>
+				</section>
+				<section>
+					<h2><a class="target-fix" id="列表"></a>列表</h2>
+						<details>
+							<summary>list-style 简写属性在一个声明中设置所有的列表属性</summary>
+						</details>
+						<details>
+							<summary>list-style-type 设置列表项标记的类型</summary>
+						</details>
+						<details>
+							<summary>list-style-position 设置在何处放置列表项标记</summary>
+						</details>
+						<details>
+							<summary>list-style-image 使用图像来替换列表项的标记</summary>
+						</details>
+				</section>
+			<h1><a class="target-fix" id="Text 文本内容"></a>Text 文本内容（继承性）</h1>
+				<section>
+					<h2><a class="target-fix" id="font 字体"></a>font 字体</h2>
+						<details>
+							<summary>font-weight 规定字体粗细</summary>
+								<p>normal 默认值。定义标准的字符</p>
+								<p>bold 定义粗体字符</p>
+								<p>100-900</p>
+						</details>
+						<details>
+							<summary>font-size 规定字体尺寸(行高)</summary>
+								<p>px</p>
+								<p>%</p>
+								<p>备注：缩写时不能省略，而且要和family放在后面</p>
+						</details>
+						<details>
+							<summary>font-family 规定字体系列</summary>
+								<p>常用中文字体：“宋体”，“黑体”，“微软雅黑”</p>
+								<p>常用英文字体：Times New Roman，Arial</p>
+								<p>备注：可以设置多种字体，浏览器根据电脑是否安装该字体判断</p>
+								<p>备注：缩写时不能省略</p>
+						</details>
+				</section>
+				<section>
+					<h2><a class="target-fix" id="文本修饰"></a>文本修饰</h2>
+						<details>
+							<summary>color 属性指定文本的颜色</summary>
+								<p>color_name 规定颜色值为颜色名称的颜色</p>
+								<p>hex_number 规定颜色值为十六进制值的颜色</p>
+								<p>rgb_number 规定颜色值为 rgb 代码的颜色</p>
+								<p>rgba_number 第四个数值(0-1)设置透明度</p>
+								<p>备注：a标签有默认样式，无法继承</p>
+						</details>
+						<details>
+							<summary>text-decoration 属性规定添加到文本的修饰</summary>
+								<p>none 默认。定义标准的文本</p>
+								<p>underline 定义文本下的一条线</p>
+								<p>overline 定义文本上的一条线</p>
+								<p>备注：a标签有默认样式，无法继承</p>
+						</details>
+				</section>
+				<section>
+					<h2><a class="target-fix" id="内容定位"></a>内容定位</h2>
+						<details>
+							<summary>line-height 设置行高</summary>
+								<p>px</p>
+								<p>%</p>
+						</details>
+						<details>
+							<summary>letter-spacing 设置间距</summary>
+								<p>normal 默认。规定字符间没有额外的空间</p>
+								<p>length 定义字符间的固定空间（允许使用负值）</p>
+						</details>
+						<details>
+							<summary>text-align 规定文本的水平对齐方式</summary>
+								<p>left 把文本排列到左边。默认值</p>
+								<p>right 把文本排列到右边</p>
+								<p>center 把文本排列到中间</p>
+						</details>
+						<details>
+							<summary>text-indent 规定文本块首行的缩进</summary>
+								<p>px</p>
+								<p>em</p>
+								<p>%</p>
+						</details>
+						<details>
+							<summary>white-space 规定文本是否换行</summary>
+								<p>normal 默认。空白会被浏览器忽略</p>
+								<p>nowrap 文本不会换行，文本会在在同一行上继续，直到遇到br标签为止</p>
+						</details>
+				</section>
+			<h1><a class="target-fix" id="动画效果"></a>动画效果</h1>
+				<section>
+					<h2><a class="target-fix" id="animation 动画"></a>animation 动画</h2>
+						<details>
+							<summary>animation-name 规定 @keyframes 动画的名称</summary>
+								<p>keyframename</p>
+						</details>
+						<details>
+							<summary>animation-duration 规定动画完成一个周期所花费的秒或毫秒</summary>
+								<p>time</p>
+						</details>
+						<details>
+							<summary>animation-timing-function 规定动画的速度曲线</summary>
+								<p>linear</p>
+								<p>ease</p>
+						</details>
+						<details>
+							<summary>animation-delay 规定在动画开始之前的延迟</summary>
+								<p>time</p>
+						</details>
+						<details>
+							<summary>animation-iteration-count 规定动画应该播放的次数</summary>
+								<p>n 定义动画播放次数的数值</p>
+								<p>infinite 规定动画应该无限次播放</p>
+						</details>
+						<details>
+							<summary>@keyframes 规定动画</summary>
+								<p>animationname 定义动画的名称</p>
+								<p>keyframes-selector 动画时长的百分比</p>
+								<p>css-styles 一个或多个合法的 CSS 样式属性</p>
+						</details>
+				</section>
+				<section>
+					<h2><a class="target-fix" id="transition 过渡"></a>transition 过渡</h2>
+						<details>
+							<summary>transition-property 规定设置过渡效果的 CSS 属性的名称</summary>
+								<p>property</p>
+						</details>
+						<details>
+							<summary>transition-duration 规定完成过渡效果需要多少秒或毫秒</summary>
+								<p>time</p>
+						</details>
+						<details>
+							<summary>transition-timing-function 规定速度效果的速度曲线</summary>
+								<p>linear</p>
+								<p>ease</p>
+						</details>
+						<details>
+							<summary>transition-delay 定义过渡效果何时开始</summary>
+								<p>time</p>
+						</details>
+				</section>
+			<h1><a class="target-fix" id="语法"></a>语法</h1>
+				<section>
+					<h3>html语法(style="value"),css语法（key:value;）</h3>
+					<h3>/* */ 此元素用于在CSS中插入注释</h3>
+					<h3>@import url();</h3>
+					<h3>@meida mediatype and|not|only (media feature) {}; 媒体查询（设备查询）</h3>
+					<h3>!important 提升优先级</h3>
+					<h3>innear-gradient();</h3>
+					<h3>文本内容可以继承，部分事件可以冒泡</h3>
+				</section>
+				<section>
+					<h2><a class="target-fix" id="选择器"></a>选择器</h2>
+						<details>
+							<summary>选择器</summary>
+								<p>标签选择器 element{}</p>
+								<p>id选择器 #id{}</p>
+								<p>类选择器 .className{}</p>
+								<p>后代选择器 selector selector{}</p>
+								<p>子代选择器 selector>selector{} </p>
+								<p>相邻选择器 selector+selector{} </p>
+								<p>通用兄弟选择器 selector~selector{}</p>
+								<p>并集选择器 selector，selector{}</p>
+								<p>交集选择器 selectorselector{}</p>
+								<p>伪类选择器 selector: {}</p>
+								<p>属性选择器 selector[]{}</p>
+								<p>通用选择器 *{}</p>
+						</details>
+				</section>
+		</article>
+	</main>
+	<aside>
+		<nav>
+			<ul>
+				<li><a href="#Box 盒子模型" class="target-h1">Box 盒子模型</a></li>
+				<li><a href="#dimension 尺寸" class="target-h2">dimension</a></li>
+				<li><a href="#border 边框" class="target-h2">border</a></li>
+				<li><a href="#background 背景" class="target-h2">background</a></li>
+				<li><a href="#定位" class="target-h2">定位</a></li>
+				<li><a href="#显示" class="target-h2">显示</a></li>
+				<li><a href="#flex 弹性盒模型" class="target-h2">flex</a></li>
+				<li><a href="#列表" class="target-h2">列表</a></li>
+				<li><a href="#Text 文本内容" class="target-h1">Text 文本内容</a></li>
+				<li><a href="#font 字体" class="target-h2">font</a></li>
+				<li><a href="#文本修饰" class="target-h2">文本修饰</a></li>
+				<li><a href="#内容定位" class="target-h2">内容定位</a></li>
+				<li><a href="#动画效果" class="target-h1">动画效果</a></li>
+				<li><a href="#animation 动画" class="target-h2">animation</a></li>
+				<li><a href="#transition 过渡" class="target-h2">transition</a></li>
+				<li><a href="#语法" class="target-h1">语法</a></li>
+				<li><a href="#选择器" class="target-h2">选择器</a></li>
+			</ul>
+		</nav>
+	</aside>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>javascript</title>
+	<style type="text/css">
+		*{margin:0px; padding:0px;}
+		header{
+			width: 100%;
+			height: 66px;
+			background-color: #006f84;
+			position: fixed;
+			top: 0;
+			left: 0;
+		}
+		article{
+			margin-top: 66px; 
+			margin-left: 222px;
+			margin-right: 200px;
+			padding-top: 6px;
+			padding-left: 44px;
+			padding-bottom: 66px;
+			line-height: 35px;
+		}
+		aside{
+			width: 200px;
+			height: 100%;
+			background-color: #fff;
+			padding-top: 22px;
+			position: fixed;
+			top:66px;
+			right: 0;
+		}
+		aside nav{
+			width: 199px;
+			border-left: 1px solid rgba(0,0,0,0.1);
+		}
+		aside nav ul{
+			list-style: none;
+			padding: 0 33px;
+			line-height: 30px;
+			color: rgba(0,0,0,0.65);
+		}
+		/*导航栏跳转*/
+		aside nav ul li .target-h1{
+			text-decoration: none;
+			color: #99979c;
+		}
+		aside nav ul li .target-h2{
+			display: block;
+			color: #99979c;
+			text-decoration: none;
+			text-indent: 1em;
+		}
+		/*导航栏跳转*/
+		.target-fix {
+		    position: relative;
+		    top: -97px; 
+		    display: block;
+		    height: 0; 
+		    overflow: hidden;
+		}
+		ul{list-style:none; }
+	</style>
+	<script>
+	</script>
+</head>
+<body>
+	<header></header>
+	<article>
+		<h3>语句 </h3>
+		<ul>
+			<li>事件属性="对象属性='value'/对象方法();"</li>
+			<li>dom操作的核心是给属性赋值或添加方法</li>
+			<li>对象方法是一条封装好的函数</li>
+			<li>属性操作：./['']</li>
+			<li>return false阻止事件</li>
+			<li>新建对象new 对象()</li>
+			<li>自定义属性 index</li>
+		</ul>
+		<br/>
+		<h3>函数</h3>
+		<ul>
+			<li>function functionname() {javascript语句}</li>
+			<li>调用函数；事件属性=function(){};或在script里直接调用,直接调用默认window对象,call/apply调用;</li>
+			<li>函数传参：$(value);function $(var param=value){对象=param}；</li>
+			<li>arguemnts：$();function $(){对象=arguemnts[0]}；</li>
+			<li>返回值：return;默认返回值undefined</li>
+			<li>return false;阻止默认行为</li>
+			<li>this：当前调用函数的对象</li>
+			<li>闭包：父函数/子函数，子函数可以继承父元素的变量</li>
+			
+		</ul>
+		<br/>
+		<h3>变量</h3>
+		<ul>
+			<li>var声明一个变量，如var varname=document.getElementById('id')’</li>
+			<li>数据类型：字符串、数字、布尔、数组、对象(引用数据)、Null、Undefined</li>
+			<li>作用域：全局变量/局部变量</li>
+			<li>匈牙利命名法（类型前缀/首字母大写）</li>
+		</ul>
+		<br/>
+		<h3>运算</h3>
+		<ul>
+			<li>typeof 返回变量的类型（原始类型Number String Boolen Null Undefined; 引用类型Object）</li>
+			<li>算术运算符：+/++;-/--;*;/;%(求余)</li>
+			<li>赋值运算符；=</li>
+			<li>字符串连接：+</li>
+			<li>比较运算符：==/===;!=;<;>;<=;>=</li>
+		</ul>
+		<br/>
+		<h3>流程控制</h3>
+		<ul>
+			<li>条件语句If(){语句}...Else(){语句} 执行时判断条件是否成立，转化为布尔值true or false</li>
+			<li>条件语句switch(){case: 语句 break;}</li>
+			<li>循环语句for(var="";i=0;i++){语句}</li>
+			<li>循环语句while(){var="";语句;i++}</li>
+			<li>中断语句break continue</li>
+		</ul>
+		
+		<br/><hr /><br/>
+		<h3>注释</h3>
+		<ul>
+			<li>// 单行注释</li>
+			<li>/* */ 多行注释</li>
+		</ul>
+	</article>
+</body>
+</html>

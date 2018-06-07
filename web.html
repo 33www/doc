@@ -1,0 +1,116 @@
+<!DOCTYPE html">
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>前端开发</title>
+	<style type="text/css">
+		*{	margin:0px; 
+			padding:0px;
+		}
+		body{
+			width: 100%
+			height: 100%;
+		}
+		.container{	
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+		.navbar{
+			width: 98.5%;
+			height: 66px;
+			background-color: #006f84;
+			box-sizing: border-box;
+			padding: 11px 22px;
+			position: fixed;
+			top: 0;
+			left: 0;
+			line-height: 44px;
+		}
+		.navbar .navbar-brand{
+			float: left;
+			margin-right: 11px;
+			font-size: 20px;
+			color: #fff;
+			text-decoration: none;
+		}
+		.navbar ul{
+			float: left;
+			list-style:none;
+		}
+		.navbar ul li{
+			float: left;
+		}
+		.navbar ul li a{
+		    padding:0 11px;
+	        color: #93c1ca;
+	        text-decoration: none;
+		}
+		.sidebar{
+			width: 222px;
+			height: 100%;
+			border-right: 1px solid rgba(0,0,0,0.1);
+			background-color: #faffff;
+			padding-top: 22px;
+			position: fixed;
+			top: 66px;
+			left: 0;
+		}
+		.sidebar section{
+			padding: 5px 44px;
+		}
+		.sidebar h4{
+			line-height: 33px;
+			color: rgba(0,0,0,0.85);
+		}
+		.sidebar p a{
+			display: block;
+			line-height: 30px;
+			color: rgba(0,0,0,0.65);
+			text-decoration: none;
+		}
+		.content{
+			width: 100%;
+			height: 100%;
+		}
+		.content iframe{
+			width: 100%;
+			height: 100%;
+			border:none;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<header class="navbar">
+			<a href="#" class="navbar-brand">web学习笔记</a>
+			<ul>
+				<li><a href="#">产品设计</a></li>
+				<li><a href="ui.html">UI设计</a></li>
+				<li><a href="web.html">前端开发</a></li>
+				<li><a href="#">后端开发</a></li>
+				<li><a href="#">运维管理</a></li>
+				<li><a href="TOOL.html">开发工具</a></li>
+				<li><a href="WEBSITE.html">网站导航</a></li>
+			</ul>
+		</header>
+		<aside class="sidebar">
+			<section>
+				<h4>JavaScript</h4>
+				<p><a href="jsSyntax.html" target="if">语法</a></p>
+				<p><a href="jsObjects.html" target="if">对象</a></p>
+				<p><a href="json.html" target="if">JSON</a></p>
+				<p><a href="jsObjects.html" target="if">AJAX</a></p>
+			</section>
+			<section>
+				<h4>JS框架</h4>
+				<p><a href="jQuery.html" target="if">jQuery</a></p>
+				<p><a href="AngularJS.html" target="if">AngularJS</a></p>
+			</section>
+		</aside>
+		<main class="content">
+			<iframe name="if" src="jsSyntax.html"></iframe>
+		</main>
+	</div>
+</body>
+</html>

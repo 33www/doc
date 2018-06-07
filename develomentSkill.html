@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>开发技巧</title>
+	<style type="text/css">
+		*{margin:0px; padding:0px;}
+		header{
+			width: 100%;
+			height: 66px;
+			background-color: #006f84;
+			position: fixed;
+			top: 0;
+			left: 0;
+		}
+		article{
+			margin-top: 66px;
+			margin-left: 222px;
+			margin-right: 200px;
+			padding-top: 6px;
+			padding-bottom: 66px;
+			padding-left: 44px;
+			line-height: 35px;
+		}
+		aside{
+			width: 200px;
+			height: 100%;
+			background-color: #fff;
+			padding-top: 22px;
+			position: fixed;
+			top:66px;
+			right: 0;
+		}
+		aside nav{
+			width: 199px;
+			border-left: 1px solid rgba(0,0,0,0.1);
+		}
+		aside nav ul{
+			list-style: none;
+			padding: 0 33px;
+			line-height: 30px;
+			color: rgba(0,0,0,0.65);
+		}
+		/*导航栏跳转*/
+		aside nav ul li .target-h1{
+			text-decoration: none;
+			color: #99979c;
+		}
+		aside nav ul li .target-h2{
+			display: block;
+			color: #99979c;
+			text-decoration: none;
+			text-indent: 1em;
+		}
+		/*导航栏跳转*/
+		.target-fix {
+		    position: relative;
+		    top: -97px; 
+		    display: block;
+		    height: 0; 
+		    overflow: hidden;
+		}
+		h1{font-size:22px; margin-top:25px; margin-bottom:10px;}
+		h2{font-size:20px; margin-top:25px; margin-bottom:10px;}
+		h3{font-size:18px; color:#444; margin-bottom:10px; font-weight: normal;}
+		summary{font-size:18px; color:#444; margin-bottom:10px;}
+		p{font-size:16px; color:#666; margin-bottom:10px;}
+	</style>
+</head>
+<body>
+	<header></header>
+	<main>
+		<article>
+			<h1>布局</h1>
+				<section>
+					<h2>div/span+css布局</h2>
+						<p>不管三七二十一，块级先用div，行内用span，完事再优化</p>
+						<p>布局语义元素header-main-footer>aside</p>
+						<p>内容语义元素nav-address-article>section</p>
+						<p>元素分类 块级元素-行内块级元素-行内元素</p>
+						<p>相同特征的块级元素用列表ul/ol/dl，如果是一组链接，可以用P标签</p>
+				</section>
+				<section>
+					<h2>css代码顺序</h2>
+						<p>盒子模型</p>
+						<p>盒子定位</p>
+						<p>文本内容</p>
+						<p>内容定位</p>
+				</section>
+			<h1>对齐</h1>
+				<section>
+					<h2>边距</h2>
+						<p>边框内留白用padding，边框外留白用margin</p>
+						<p>padding控制父子,margin控制兄弟</p>
+						<p>父元素没有边框的情况下，子元素的margin会对其失效</p>
+						<p>行内元素默认基线对齐，不在同一行时要设置vertical-align:top</p>
+						<p>input之间换行会有边距，可添加注释清除</p>
+				</section>
+				<section>
+					<h2>垂直居中</h2>
+						<p>设置行高line-height等于父元素</p>
+						<p>利用vertical-align:middle; 基于中线对齐</p>
+						<p>父元素确定高度（不确定），子元素相对定位（绝对定位）top50%；transform:translateY(-50%);也可以用margin子元素宽度的一半实现</p>
+				</section>
+				<section>
+					<h2>水平居中</h2>
+						<p>margin:0 auto</p>
+						<p>text-align:center</p>
+				</section>
+			<h1>清除浮动</h1>
+				<section>
+						<p>父级元素有height的时候不需要</p>
+						<p>父级元素{display:block;overflow:hidden; *zoom:1;}；overflow会提前计算内容的高度</p>
+						<p>使后一个元素不允许其他浮动.clearfix:after{content""; height:0; display:none; clear:both;}；.clearfix { *zoom:1; }兼容IE；给最后一个浮动元素添加class</p>
+				</section>
+			<h1>图标</h1>
+				<section>
+					<h2>span使用背景图片</h2>
+						<p>
+							.icon-fix{
+								width:;
+								height:;
+								background-image:url(); // 插入背景图片
+								position:absolute;
+								top:;
+								right:;
+							}
+						</p>
+					<h2>矢量图标svg</h2>
+					<h2>阿里图标库iconfont</h2>
+				</section>
+				<section>
+					<h2>三角形</h2>
+						<p>
+							div+border+transform:ratate(deg)旋转
+						</p>
+				</section>
+			<h1>锚点偏移</h1>
+				<section>
+					<h2>暗锚点</h2>
+						<p>
+							.target-fix {
+							    position: relative;
+							    top: ; // 偏移为锚点文本距离顶部的高度
+							    display: block;
+							    height: 0; //高度为0
+							    overflow: hidden;
+							}
+						</p>
+				</section>
+			<h1>js</h1>
+				<section>
+					<h2>核心改变css，所以简单粗暴的方法是添加类和删除类</h2>
+					<h2>为属性赋值或添加方法</h2>
+				</section>
+			<h3>路径</h3>
+			<ul>
+				<li>相对路径</li>
+					<dl>
+						<dt>同一级目录.jpg</dt>
+						<dt>同一级文件夹下/images</dt>
+						<dt>上一级目录../images</dt>
+						<dt>上上级目录../../images</dt>
+					</dl>
+				<li>绝对路径</li>
+					<dt>根据盘符</dt>
+			</ul>
+			
+			<h3>命名规则</h3>
+			<ul>
+				<li>wraper header main footer</li>
+				<li>-hd -bd -ft</li>
+			</ul>
+			<h3>重复代码</h3>
+			<ul>
+				<li>绑定多个class</li>
+			</ul>
+			
+			<h3>兼容</h3>
+			<ul>
+				<li>currentStyle兼容IE，getComputedStyle</li>
+				<li>复合样式</li>
+				<li></li>
+			</ul>
+			<h3>概念</h3>
+			<ul>
+				<li>HTML是使用标签实现语义化的文本</li>
+				<li>封装-把一个对象存储到另一个对象中</li>
+				<li>继承-由另一个类获得类的对象</li>
+				<li>key-value键值对（property属性 method方法）属性为数据，方法为函数</li>
+				<li>attribute是对象的特性</li>
+				<li>dom是一种接口</li>
+				<li>遍历-依次对树中每个节点访问一次且仅访问一次</li>
+			</ul>
+			
+			<h3>css三大特性</h3>
+			<ul>
+				<li>文本样式是可以继承的</li>
+				<li>a标签的颜色和下划线不能继承</li>
+				<li>h标签的字体大小不能继承</li>
+				<li>层叠性 优先级 id>类>标签>*>继承</li>
+			</ul>
+			<h3>利用边框作图形</h3>
+			<h3>不能做为判断条件</h3>
+			<ul>
+				<li>路径</li>
+				<li>复合样式</li>
+				<li></li>
+			</ul>
+			<h3>优化</h3>
+			<p>script放在后面，因为搜索引擎由上至下抓取，尽量让文档内容先被抓取</p>
+			
+		</article>
+	</main>
+	<aside>
+		<nav>
+			<ul>
+				<!-- <li><a href="#Box 盒子模型" class="target-h1">Box 盒子模型</a></li>
+				<li><a href="#dimension 尺寸" class="target-h2">dimension</a></li>
+				<li><a href="#border 边框" class="target-h2">border</a></li>
+				<li><a href="#background 背景" class="target-h2">background</a></li>
+				<li><a href="#定位" class="target-h2">定位</a></li>
+				<li><a href="#显示" class="target-h2">显示</a></li>
+				<li><a href="#flex 弹性盒模型" class="target-h2">flex</a></li>
+				<li><a href="#列表" class="target-h2">列表</a></li>
+				<li><a href="#Text 文本内容" class="target-h1">Text 文本内容</a></li>
+				<li><a href="#font 字体" class="target-h2">font</a></li>
+				<li><a href="#文本修饰" class="target-h2">文本修饰</a></li>
+				<li><a href="#内容定位" class="target-h2">内容定位</a></li>
+				<li><a href="#动画效果" class="target-h1">动画效果</a></li>
+				<li><a href="#animation 动画" class="target-h2">animation</a></li>
+				<li><a href="#transition 过渡" class="target-h2">transition</a></li>
+				<li><a href="#语法" class="target-h1">语法</a></li>
+				<li><a href="#选择器" class="target-h2">选择器</a></li> -->
+			</ul>
+		</nav>
+	</aside>
+</body>
+</html>

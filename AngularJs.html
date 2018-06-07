@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS</title>
+	<style type="text/css">
+		*{margin:0px; padding:0px;}
+		header{
+			width: 100%;
+			height: 66px;
+			background-color: #006f84;
+			position: fixed;
+			top: 0;
+			left: 0;
+		}
+		article{
+			margin-top: 66px; 
+			margin-left: 222px;
+			margin-right: 200px;
+			padding-top: 6px;
+			padding-left: 44px;
+			padding-bottom: 66px;
+			line-height: 35px;
+		}
+		aside{
+			width: 200px;
+			height: 100%;
+			background-color: #fff;
+			padding-top: 22px;
+			position: fixed;
+			top:66px;
+			right: 0;
+		}
+		aside nav{
+			width: 199px;
+			border-left: 1px solid rgba(0,0,0,0.1);
+		}
+		aside nav ul{
+			list-style: none;
+			padding: 0 33px;
+			line-height: 30px;
+			color: rgba(0,0,0,0.65);
+		}
+		/*导航栏跳转*/
+		aside nav ul li .target-h1{
+			text-decoration: none;
+			color: #99979c;
+		}
+		aside nav ul li .target-h2{
+			display: block;
+			color: #99979c;
+			text-decoration: none;
+			text-indent: 1em;
+		}
+		/*导航栏跳转*/
+		.target-fix {
+		    position: relative;
+		    top: -97px; 
+		    display: block;
+		    height: 0; 
+		    overflow: hidden;
+		}
+		h1{font-size:22px; margin-top:25px; margin-bottom:10px;}
+		h2{font-size:20px; margin-top:25px; margin-bottom:10px;}
+		/*标签*/
+		h3{font-size:18px; margin-bottom:10px; font-weight: normal; cursor: pointer;}
+		h3:hover{background-color: #f80;}
+		/*属性*/
+		details summary{
+			font-size:16px; 
+			color:#666; 
+			margin-bottom:10px;}
+		/*值*/
+		details p{
+			font-size:14px; 
+			color:#888; 
+			margin-bottom:10px;}
+	</style>
+</head>
+<body>
+	<header></header>
+	<article>
+		<section>
+			<h2>核心</h2>
+			<p>自定义属性data-ng-</p>
+			<p>表达式{{}}</p>
+		</section>
+		<section>
+			<h2>指令</h2>
+			
+			<p>ng-model 指令把输入域的值绑定到应用程序变量 name</p>
+			<p>ng-bind 指令把应用程序变量 name 绑定到某个段落的 innerHTM</p>
+
+			<details>
+				<summary>ng-app 声明该元素是一个AngularJS应用</summary>
+				<p>练习时值可以为空</p>
+			</details>
+			<details>
+				<summary>ng-init 声明变量</summary>
+				<p>备注：通常在控制器ng-controller执行</p>
+			</details>
+			<details>
+				<summary>ng-controller 声明函数</summary>
+				<p></p>
+			</details>
+		</section>
+		<section>
+			<h2>对象</h2>
+				<details>
+					<summary>$scope</summary>
+				</details>
+				<details>
+					<summary>$location</summary>
+				</details>
+				<details>
+					<summary>$http</summary>
+				</details>
+				<details>
+					<summary>$timeout</summary>
+				</details>
+				<details>
+					<summary>$interval</summary>
+				</details>
+		</section>
+		<section>
+			<h2>功能</h2>
+			<p>把应用程序数据绑定到 HTML 元素</p>
+			<p>可以克隆和重复 HTML 元素</p>
+			<p>可以隐藏和显示 HTML 元素</p>
+			<p>可以在 HTML 元素"背后"添加代码</p>
+			<p>支持输入验证</p>
+		</section>
+	</article>
+</body>
+</html>
