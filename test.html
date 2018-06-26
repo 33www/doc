@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <script src="lib/jq/jquery-3.3.1.js"></script>
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+    <button>点击我</button>
+    <script>
+      $(function (){
+        $("button").click(function(){
+          console.log(this);
+          $.ajax({
+            url: "test.json",
+            type: "get",
+            dataType: "json",
+            success: function(data){
+              console.log(this);
+              console.log(data);
+            }
+            error: function(){
+              alert("请求失败");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

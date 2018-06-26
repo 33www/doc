@@ -122,6 +122,44 @@
 				</section>
 				<h1>事件可以直接调用，event()</h1>
 				<h2>jq的slim版没有效果和ajax</h2>
+				<h1>判断移动端、Android和iOS、微信浏览器</h1>
+				<section>
+					<p>思路：</p>
+					<p>获取浏览器信息 navigator对象userAgent用户代理</p>
+					<p>通过正则匹配字符串 match(/string/i)</p>
+					<p>代码：</p>
+					<p>
+						if (navigator.userAgent.match(/mobile/i)) {
+							alert("Mobile");
+						}
+					</p>
+					<p>
+						if (navigator.userAgent.match(/(iphone|ipad)/i)) {
+							alert("iOs");
+						}
+					</p>
+					<p>
+						if (navigator.userAgent.match(/android/i)) {
+							alert("Android");
+						}
+					</p>
+					<p>
+						if (navigator.userAgent.match(/MicroMessenger/i)) {
+							alert("微信浏览器");
+						}
+					</p>
+				</section>
+				<h1>app下载页面</h1>
+				<section>
+					<p>index 主页面响应式，PC显示二维码，Mobile显示下载按钮</p>
+					<p>微信浏览器显示遮罩</p>
+					<p>Android和iOs分不同链接</p>
+				</section>
+				<h1>ios下载app</h1>
+				<section>
+					<p>ipa+plist下载 实际前端只需要拿到plist链接</p>
+					<p>plist 必须使用https和绝对路径，如果使用相对路径下载为null</p>
+				</section>
 		</article>
 	</main>
 	<aside>
