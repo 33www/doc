@@ -1,0 +1,48 @@
+{
+	"js":[
+		{
+			"name":"join() 数组对象，转化为字符串",
+			"value":[
+				"separator 参数，分隔符",
+				"备注：如果要将数组转化成字符串，可以不用for循环"
+	        ]
+		},
+		{
+			"name":"visibility 属性规定元素是否可见",
+			"value":[
+				"visible",
+	            "hidden"
+	        ]
+		}
+	],
+	"jq":[
+		{
+			"name":"ajax() ajax对象",
+			"value":[
+				"separator 参数，分隔符",
+				"备注：如果要将数组转化成字符串，可以不用for循环"
+	        ]
+		},
+		{
+			"name":"load() ajax对象",
+			"value":[
+				"visible",
+	            "hidden"
+	        ]
+		},
+		{
+			"name":"get() ajax对象",
+			"value":[
+				"visible",
+	            "hidden"
+	        ]
+		},
+		{
+			"name":"post() ajax对象",
+			"value":[
+				"visible",
+	            "hidden"
+	        ]
+		}
+	]
+}

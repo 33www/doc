@@ -1,11 +1,10 @@
 {
 	"css":[
 		{
-			"name":"display 属性规定元素应该生成的框的类型",
+			"name":"join() 数组对象，转化为字符串",
 			"value":[
-				"inline",
-	            "block",
-	            "inline-block"
+				"separator 参数，分隔符",
+				"备注：如果要将数组转化成字符串，可以不用for循环"
 	        ]
 		},
 		{

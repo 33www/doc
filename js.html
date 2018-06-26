@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js</title>
+</head>
+<body>
+	<div id="js"></div>
+	<div id="jq"></div>
+</body>
+<script>
+      $(function (){
+            $.get("json/js.json",function(date){
+                $.each(date.js,function(i,item){
+                  $("#js").append("<details><summary>"+item.name+"</summary>"+"<p>"+item.value.join("</p><p>")+"</p></details>");
+                });
+                $.each(date.jq,function(i,item){
+                  $("#js").append("<details><summary>"+item.name+"</summary>"+"<p>"+item.value.join("</p><p>")+"</p></details>");
+                });
+              });
+        });
+    </script>
+</html>
