@@ -23,21 +23,8 @@
               url: "test.json",
               type: "get",
               datatype: "json",
-              success: function(data){
-                console.log(data);
-              },
-              error: function(data){
-                console.log(data.status);
-              }
-            });
-        });
-        $("a").click(function(){
-            $.ajax({
-              url: "test1.json",
-              type: "get",
-              datatype: "json",
-              success: function(data){
-                console.log(data);
+              success: function(a){
+                console.log(a);
               },
               error: function(data){
                 console.log(data.status);
