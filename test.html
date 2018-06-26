@@ -24,9 +24,9 @@
               type: "get",
               datatype: "json",
               success: function(xhr,data,status){
-                console.log(xhr.status);
-                console.log(data.status);
-                console.log(status.status);
+                console.log(xhr.msg);
+                console.log(data.msg);
+                console.log(status.msg);
               },
               error: function(data){
                 console.log(data.status);
