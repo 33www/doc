@@ -16,14 +16,11 @@
     <div></div>
     <script>
       $(function (){
-        $("button").click(function(){
             $.get("test.json",function(d){
                 $.each(d.css,function(i,item){
                   $("div").append("<details><summary>"+item.name+"</summary>"+"<p>"+item.value.join("</p><p>")+"</p></details>");
                 });
               });
-              
-            });
         });
     </script>
   </body>
