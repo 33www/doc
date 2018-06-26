@@ -19,7 +19,7 @@
         $("button").click(function(){
             $.get("test.json",function(d){
                 $.each(d.css,function(i){
-                  console.log(item.name);
+                  console.log(d.css[i].name);
                   $("div").append("<details><summary>"+d.css[i].name+"</summary></details>");
                   $.each(d.css[i].value,function(t){
                     console.log(this+d.css[t].value);
