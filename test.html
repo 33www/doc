@@ -24,7 +24,7 @@
                     var p=item.value.join("</p><p>");
                     console.log(p);
                   });
-                  $("div").append("<details><summary><p>"+item.name+item.value.join("</p><p>")+"</p></summary></details>");
+                  $("div").append("<details><summary>"+item.name+"</summary>"+"<p>"+item.value.join("</p><p>")+"</p></details>");
 
                   // $.each(item.value,function(i){
                   //   if($("summary").text()==item.name){
