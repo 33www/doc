@@ -19,21 +19,14 @@
     <script>
       $(function (){
         $("button").click(function(){
-            $.ajax({
-              url: "test.json",
-              type: "get",
-              datatype: "json",
-              success: function(xhr,data,status){
+            $.get("test.json",function(xhr,data,status){
                 console.log(xhr.msg);
                 console.log(data.msg);
                 console.log(status.msg);
-              },
-              error: function(data){
-                console.log(data.status);
-              }
+              });
+              
             });
         });
-      });
     </script>
   </body>
 </html>
