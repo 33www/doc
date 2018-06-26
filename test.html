@@ -13,25 +13,19 @@
   <body>
     <h1>Hello, world!</h1>
     <button>点击我</button>
-    <div>
-      <h3></h3>
-      <ul></ul>
-    </div>
+    <ul>
+    </ul>
     <script>
       $(function (){
         $("button").click(function(){
+          console.log(this);
           $.ajax({
             url: "test.json",
             type: "get",
             dataType: "json",
             success: function(data){
+              console.log(this);
               console.log(data);
-              // for (var i in data.css.value){
-              //   $("ul").after("<li>"+j.p[i]+"</li>");
-              // }
-              // $.each(data.css,function(i,item){
-              //   $("ul").after("<li>"+item.value+"</li>");
-              // });
             },
             error: function(){
               alert("请求失败");
@@ -39,8 +33,6 @@
           });
         });
       });
-
-
     </script>
   </body>
 </html>
