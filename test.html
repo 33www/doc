@@ -19,13 +19,16 @@
         $("button").click(function(){
             $.get("test.json",function(d){
                 $.each(d.css,function(i,item){
+                  $.each(item.value,function(i){
+                    console.log(i);
+                  });
                   $("div").append("<details><summary>"+item.name+"</summary></details>");
 
-                  $.each(item.value,function(i){
-                    if($("summary").text()==item.name){
-                      $("summary").after("<p>"+item.value[i]+"</p>")
-                    }
-                  });
+                  // $.each(item.value,function(i){
+                  //   if($("summary").text()==item.name){
+                  //     $("summary").after("<p>"+item.value[i]+"</p>")
+                  //   }
+                  // });
                 });
               });
               
