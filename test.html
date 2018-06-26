@@ -19,13 +19,9 @@
         $("button").click(function(){
             $.get("test.json",function(d){
                 $.each(d.css,function(i,item){
-                  console.log(i);
-                  $.each(item.value,function(i){
-                    var p="<p>"+d.css[i].value+"</p>";
-                    return p;
-                  });
-                  console.log(p);
                   $("div").append("<details><summary>"+item.name+"</summary></details>");
+                  var a=$("summary").text(item.name);
+                  console.log(a);
                   // $.each(d.css[i].value,function(t){
                   //   console.log(this+d.css[t].value);
                   //   $("summary").after("<p>"+d.css[t].value+"</p>")
