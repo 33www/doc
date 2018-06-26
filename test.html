@@ -19,7 +19,17 @@
     <script>
       $(function (){
         $("button").click(function(){
-            $("ul").load("test.json css.name");
+            $.ajax({
+              url: "test.json",
+              type: "get",
+              datatype: "json",
+              success: function(data){
+                console.log(data);
+              },
+              error: function(data){
+                console.log(data);
+              }
+            });
         });
       });
     </script>
