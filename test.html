@@ -18,12 +18,12 @@
       $(function (){
         $("button").click(function(){
             $.get("test.json",function(d){
-                $.each(d.css,function(i,item){
+                $.each(d.css,function(i){
                   console.log(item.name);
-                  $("div").append("<details><summary>"+item.name+"</summary></details>");
-                  $.each(item.value,function(i,ite){
-                    console.log(this+ite.value);
-                    $("summary").after("<p>"+ite.value+"</p>")
+                  $("div").append("<details><summary>"+d.css[i].name+"</summary></details>");
+                  $.each(d.css[i].value,function(t){
+                    console.log(this+d.css[t].value);
+                    $("summary").after("<p>"+d.css[t].value+"</p>")
                   });
                 })
               });
