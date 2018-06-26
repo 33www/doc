@@ -19,10 +19,10 @@
     <script>
       $(function (){
         $("button").click(function(){
-            $.get("test.json",function(xhr,data,status){
-                console.log(xhr);
-                console.log(data);
-                console.log(status);
+            $.get("test.json",function(d){
+                $.each(d.css,function(){
+                  console.log(this+d.css);
+                })
               });
               
             });
