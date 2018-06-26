@@ -15,22 +15,11 @@
     <button>点击我</button>
     <ul>
     </ul>
+    <script src="test.json"></script>
     <script>
       $(function (){
         $("button").click(function(){
-          console.log(this);
-          $.ajax({
-            url: "test.json",
-            type: "get",
-            dataType: "json",
-            success: function(data){
-              console.log(this);
-              console.log(data);
-            },
-            error: function(){
-              alert("请求失败");
-            }
-          });
+            $("ul").load("test.json");
         });
       });
     </script>

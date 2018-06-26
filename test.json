@@ -1,27 +1,19 @@
-// {
-// 	"css":[
-// 		{
-// 			"name":"display 属性规定元素应该生成的框的类型",
-// 			"value":[
-// 				"inline",
-// 	            "block",
-// 	            "inline-block"
-// 	        ]
-// 		},
-// 		{
-// 			"name":"visibility 属性规定元素是否可见",
-// 			"value":[
-// 				"visible",
-// 	            "hidden"
-// 	        ]
-// 		}
-// 	],
-// }
-{
-    "first":[
-        {"name":"张三","sex":"男"},
-        {"name":"李四","sex":"男"},
-        {"name":"王武","sex":"男"},
-        {"name":"李梅","sex":"女"}
-    ]
+var ocss={
+	"css":[
+		{
+			"name":"display 属性规定元素应该生成的框的类型",
+			"value":[
+				"inline",
+	            "block",
+	            "inline-block"
+	        ]
+		},
+		{
+			"name":"visibility 属性规定元素是否可见",
+			"value":[
+				"visible",
+	            "hidden"
+	        ]
+		}
+	],
 }
