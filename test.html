@@ -21,7 +21,7 @@
                 $.each(d.css,function(i,item){
                   $.each(item.value,function(i){
                     // var p="<p>"+item.value[i]+"</p>";
-                    var p=item.value.join();
+                    var p=item.value.join("</p><p>");
                     console.log(p);
                   });
                   $("div").append("<details><summary>"+item.name+"</summary></details>");
