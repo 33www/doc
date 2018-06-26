@@ -18,13 +18,17 @@
       $(function (){
         $("button").click(function(){
             $.get("test.json",function(d){
-                $.each(d.css,function(i){
-                  console.log(d.css[i].name);
-                  $("div").append("<details><summary>"+d.css[i].name+"</summary></details>");
-                  $.each(d.css[i].value,function(t){
-                    console.log(this+d.css[t].value);
-                    $("summary").after("<p>"+d.css[t].value+"</p>")
+                $.each(d.css,function(i,item){
+                  console.log(i);
+                  $.each(item.value,function(){
+                    var p="<p>"+d.css[i].value+"</p>";
                   });
+                  console.log(p);
+                  $("div").append("<details><summary>"+item.name+"</summary></details>");
+                  // $.each(d.css[i].value,function(t){
+                  //   console.log(this+d.css[t].value);
+                  //   $("summary").after("<p>"+d.css[t].value+"</p>")
+                  // });
                 })
               });
               
