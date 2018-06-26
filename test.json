@@ -1,4 +1,4 @@
-var ocss={
+{
 	"css":[
 		{
 			"name":"display 属性规定元素应该生成的框的类型",
