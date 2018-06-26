@@ -26,9 +26,12 @@
             dataType: "json",
             success: function(data){
               console.log(data.css.value);
-              for (var i in data.css.value){
-                $("ul").after("<li>"+j.p[i]+"</li>");
-              }
+              // for (var i in data.css.value){
+              //   $("ul").after("<li>"+j.p[i]+"</li>");
+              // }
+              $.each(data.css,function(i,item){
+                $("ul").after("<li>"+item.value+"</li>");
+              });
             },
             error: function(){
               alert("请求失败");
