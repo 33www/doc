@@ -20,13 +20,13 @@
             $.get("test.json",function(d){
                 $.each(d.css,function(i,item){
                   $("div").append("<details><summary>"+item.name+"</summary></details>");
-                  var a=$("summary").text(item.name);
-                  console.log(a);
-                  // $.each(d.css[i].value,function(t){
-                  //   console.log(this+d.css[t].value);
-                  //   $("summary").after("<p>"+d.css[t].value+"</p>")
-                  // });
-                })
+
+                  $.each(item.value,function(i,item){
+                    if($("summary").text()==item.name){
+                      $("summary").after("<p>"+item+"</p>")
+                    }
+                  });
+                });
               });
               
             });
