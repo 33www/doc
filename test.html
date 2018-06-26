@@ -23,15 +23,10 @@
               url: "test.json",
               type: "get",
               datatype: "json",
-              success: function(name,status,data,d.abort,c.status,b.name,a.css,a.re){
-                console.log(name);
-                console.log(status);
+              success: function(xhr,data,status){
+                console.log(xhr);
                 console.log(data);
-                console.log(d.abort);
-                console.log(c.status);
-                console.log(b.name);
-                console.log(a.css);
-                console.log(a.re);
+                console.log(status);
               },
               error: function(data){
                 console.log(data.status);
