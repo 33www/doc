@@ -1,0 +1,19 @@
+{
+	"css":[
+		{
+			"name":"display 属性规定元素应该生成的框的类型",
+			"value":[
+				"inline",
+	            "block",
+	            "inline-block"
+	        ]
+		},
+		{
+			"name":"visibility 属性规定元素是否可见",
+			"value":[
+				"visible",
+	            "hidden"
+	        ]
+		}
+	],
+}
