@@ -23,8 +23,15 @@
               url: "test.json",
               type: "get",
               datatype: "json",
-              success: function(a){
+              success: function(a,b,data,status,result,css,name,value){
                 console.log(a);
+                console.log(b);
+                console.log(data);
+                console.log(status);
+                console.log(result);
+                console.log(css);
+                console.log(nam);
+                console.log(value);
               },
               error: function(data){
                 console.log(data.status);
